@@ -8,7 +8,7 @@ spec:
     image: localhost:32000/app-flask:latest
     livenessProbe:
       httpGet:
-        path: /
+        path: /health
         port: 3000
       initialDelaySeconds: 10
       timeoutSeconds: 2
@@ -20,3 +20,5 @@ spec:
         port: 3000
       initialDelaySeconds: 2
       periodSeconds: 5
+
+      # OK
